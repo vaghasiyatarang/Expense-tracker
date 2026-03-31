@@ -13,7 +13,7 @@ interface PageProps {
   searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-export default async function DashboardPage({ searchParams = {} }: PageProps) {
+export default async function DashboardPage({ searchParams = {} }: any) {
   const session = await getServerSession(authOptions);
   if (!session) redirect("/login");
 
